@@ -1,334 +1,577 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>來玩逆轉裁判</title>
-<style>
-
-html,a{cursor:url(image/cursor.png),auto;}
-
-::-webkit-scrollbar {
-    display: none;
-}
-.coffee{
-position:absolute;
-left:100%;
-top:0;
-animation:star 5s linear infinite;
-}
-
-.panic{
-position:absolute;
-left:50%;
-top:0;
-animation:star2 4s linear infinite;
-}
-
-.anger{
-position:absolute;
-left:20%;
-top:0;
-animation:star3 3s linear infinite;
-}
-
-.mayoi{
-position:absolute;
-left:20%;
-top:0;
-animation:star4 3.5s linear infinite;
-}
-
-.saw{
-position:absolute;
-left:20%;
-top:0;
-animation:star5 3.5s linear infinite;
-}
-
-.larry{
-position:absolute;
-left:20%;
-top:0;
-animation:star6 3.5s linear infinite;
-}
-
-
-@keyframes star{
-0%{left:100%;top:-100px;  transform:rotate(0deg);}
-100%{left:40%;top:100vh;transform:rotate(1080deg);}
-}
-
-@keyframes star2{
-0%{left:50%;top:-100px;  transform:rotate(0deg);}
-100%{left:75%;top:100%;transform:rotate(1080deg);}
-}
-
-@keyframes star3{
-0%{left:20%;top:-100px;  transform:rotate(0deg);}
-100%{left:95%;top:100%;transform:rotate(-720deg);}
-}
-
-@keyframes star4{
-0%{left:20%;top:-100px;  transform:rotate(0deg);}
-100%{left:0%;top:100%;transform:rotate(720deg);}
-}
-
-
-@keyframes star5{
-0%{left:20%;top:-100px;  transform:rotate(0deg);}
-100%{left:40%;top:100%;transform:rotate(-720deg);}
-}
-
-@keyframes star6{
-0%{left:80%;top:-100px;  transform:rotate(0deg);}
-100%{left:100%;top:100%;transform:rotate(-720deg);}
-}
-
-
-p{text-align: center;}
-strong{font-size:20px;color:red;}
-
-.marquee-container {
-  height:50px;
-  background-color:rgba(168,141,219,.6);
-  width: 100%;
-  overflow: hidden;
-  display:flex;
-  align-items: center;
-  top:0;
-  z-index:10;
-}
-
-.marquee-content {
-  display: inline-block;
-  white-space: nowrap;
-  animation: marquee 15s linear infinite;
-}
-
-.marquee-content2 {
-  display: inline-block;
-  white-space: nowrap;
-  animation: marquee2 15s linear infinite;
-}
-.marquee-content3 {
-  display: inline-block;
-  white-space: nowrap;
-  animation: marquee2 15s linear infinite;
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-@keyframes marquee2 {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-@keyframes marquee3 {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-h1{
-    color: transparent;
-    -webkit-text-stroke: 0.4px #fff;
-    text-shadow: 0 0 5px #f03030, 0 0 10px #4100E1, 0 0 15px #FF00FF, 0 0 30px #f04597, 0 0 20px #ff00ee;
-    font-size:90px;
-    text-align: center;
-}
-
-
-#flex-container{
-display: flex;
-flex-direction:row;
-align-items:center;
-justify-content:center;
-height:400px;
-min-height:400px;
-width:800px;
-text-align: center;
-    position:relative;
-     margin:auto;
-}
-
-.BADGE{
-    width: 250px;
-    flex:auto;
-    margin:5px;
+  <title>來玩逆轉裁判</title>
+  <style>
+    html,
+    a {
+      cursor: url(image/cursor.png), auto;
     }
-    
-.TGAAC{
-animation:huge 9s ease infinite;
-width:100px;
-}
 
-.AA{
-animation:huge 9s 3s ease infinite;
-width:100px;
-}
+    ::-webkit-scrollbar {
+      display: none;
+    }
 
-.AAI{
-animation:huge 9s 6s ease infinite;
-width:100px;
-}
+    .coffee {
+      position: absolute;
+      left: 100%;
+      top: 0;
+      animation: star 5s linear infinite;
+    }
 
+    .panic {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      animation: star2 4s linear infinite;
+    }
 
-.badge{width:100%;}
+    .anger {
+      position: absolute;
+      left: 20%;
+      top: 0;
+      animation: star3 3s linear infinite;
+    }
 
-@keyframes huge{
-0%{width:100px;}
-17%{width:200px;}
-33%{width:100px;}
-100%{width:100px;}
-}
+    .mayoi {
+      position: absolute;
+      left: 20%;
+      top: 0;
+      animation: star4 3.5s linear infinite;
+    }
 
-.ads{width:100%;}
+    .saw {
+      position: absolute;
+      left: 20%;
+      top: 0;
+      animation: star5 3.5s linear infinite;
+    }
 
-
-#download{
-background-color:red;
-height:120px;
-width:250px;
-position:fixed;
-left: calc(50% - 125px);
-bottom:20px;
-display:flex;
-align-items: center;
-justify-content:center;
-font-size:60px;
-border-radius:10px;
-border: 0.5rem outset yellow;
-padding:15px;
-margin:auto;
-animation:button 1s ease alternate infinite;
-z-index:10;
-}
-
-@keyframes button{
-0%{width:250px;height:120px;left: calc(50% - 125px);}
-100%{width:300px;height:100px;left: calc(50% - 150px);}
-}
-
-#download a{
-color:yellow;
-}
-
-.span{height:180px;}
-#objection{
-display:flex;
-text-align: center;
-align-items: center;
-margin:auto;
-position:relative;
-justify-content:center;
-}
-
-audio{width:100%;}
-body{background-color:rgb(70,40,91);animation:color 7s linear infinite}
-
-@keyframes color{
-0% {background-color:red;}
-12.5% {background-color:orange;}
-25%{background-color:yellow;}
-37.5%{background-color:green;}
-50%{background-color: cayn;}
-75%{background-color:blue;}
-87.5%{background-color:purple;}
-100%{background-color:red;}
-}
+    .larry {
+      position: absolute;
+      left: 20%;
+      top: 0;
+      animation: star6 3.5s linear infinite;
+    }
 
 
-</style>
+    @keyframes star {
+      0% {
+        left: 100%;
+        top: -100px;
+        transform: rotate(0deg);
+      }
+
+      100% {
+        left: 40%;
+        top: 100vh;
+        transform: rotate(1080deg);
+      }
+    }
+
+    @keyframes star2 {
+      0% {
+        left: 50%;
+        top: -100px;
+        transform: rotate(0deg);
+      }
+
+      100% {
+        left: 75%;
+        top: 100%;
+        transform: rotate(1080deg);
+      }
+    }
+
+    @keyframes star3 {
+      0% {
+        left: 20%;
+        top: -100px;
+        transform: rotate(0deg);
+      }
+
+      100% {
+        left: 95%;
+        top: 100%;
+        transform: rotate(-720deg);
+      }
+    }
+
+    @keyframes star4 {
+      0% {
+        left: 20%;
+        top: -100px;
+        transform: rotate(0deg);
+      }
+
+      100% {
+        left: 0%;
+        top: 100%;
+        transform: rotate(720deg);
+      }
+    }
+
+
+    @keyframes star5 {
+      0% {
+        left: 20%;
+        top: -100px;
+        transform: rotate(0deg);
+      }
+
+      100% {
+        left: 40%;
+        top: 100%;
+        transform: rotate(-720deg);
+      }
+    }
+
+    @keyframes star6 {
+      0% {
+        left: 80%;
+        top: -100px;
+        transform: rotate(0deg);
+      }
+
+      100% {
+        left: 100%;
+        top: 100%;
+        transform: rotate(-720deg);
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    strong {
+      font-size: 20px;
+      color: red;
+    }
+
+    .marquee-container {
+      height: 50px;
+      background-color: rgba(168, 141, 219, 1);
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      top: 10px;
+      z-index: 10;
+      position: sticky;
+    }
+
+    .marquee-content {
+      display: inline-block;
+      white-space: nowrap;
+      animation: marquee 15s linear infinite;
+    }
+
+    .marquee-content2 {
+      display: inline-block;
+      white-space: nowrap;
+      animation: marquee2 15s linear infinite;
+    }
+
+    .marquee-content3 {
+      display: inline-block;
+      white-space: nowrap;
+      animation: marquee2 15s linear infinite;
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    @keyframes marquee2 {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    @keyframes marquee3 {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    h1 {
+      color: transparent;
+      -webkit-text-stroke: 0.4px #fff;
+      text-shadow: 0 0 5px #f03030, 0 0 10px #4100E1, 0 0 15px #FF00FF, 0 0 30px #f04597, 0 0 20px #ff00ee;
+      font-size: 90px;
+      text-align: center;
+    }
+
+
+    #flex-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      height: 400px;
+      min-height: 400px;
+      width: 800px;
+      text-align: center;
+      position: relative;
+      margin: auto;
+    }
+
+    .BADGE {
+      width: 250px;
+      flex: auto;
+      margin: 5px;
+    }
+
+    .TGAAC {
+      animation: huge 9s ease infinite;
+      width: 100px;
+    }
+
+    .AA {
+      animation: huge 9s 3s ease infinite;
+      width: 100px;
+    }
+
+    .AAI {
+      animation: huge 9s 6s ease infinite;
+      width: 100px;
+    }
+
+
+    .badge {
+      width: 100%;
+    }
+
+    @keyframes huge {
+      0% {
+        width: 100px;
+      }
+
+      17% {
+        width: 200px;
+      }
+
+      33% {
+        width: 100px;
+      }
+
+      100% {
+        width: 100px;
+      }
+    }
+
+    .moon {
+      width: 100%;
+    }
+
+    #ads {
+      position: fixed;
+      top: 100px;
+      width: 100%;
+      z-index: 10;
+    }
+
+
+    .ads {
+      position: relative;
+      animation: ads 2s 6s forwards;
+      left: -1000%;
+      z-index: 10;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+
+    @keyframes ads {
+      0% {
+        left: -1000%;
+      }
+
+      50% {
+        left: 0;
+      }
+
+      60% {
+        left: 10%;
+      }
+
+      70% {
+        left: -20%;
+      }
+
+      80% {
+        left: 20%;
+      }
+
+      90% {
+        left: -10%;
+      }
+
+      100% {
+        left: 0;
+      }
+    }
+
+    #download {
+      background-color: red;
+      height: 120px;
+      width: 250px;
+      position: fixed;
+      left: calc(50% - 125px);
+      bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 60px;
+      border-radius: 10px;
+      border: 0.5rem outset yellow;
+      padding: 15px;
+      margin: auto;
+      animation: button 1s ease alternate infinite;
+      z-index: 10;
+    }
+
+    @keyframes button {
+      0% {
+        width: 250px;
+        height: 120px;
+        left: calc(50% - 125px);
+      }
+
+      100% {
+        width: 300px;
+        height: 100px;
+        left: calc(50% - 150px);
+      }
+    }
+
+    #battle {
+      background-color: yellow;
+      height: 120px;
+      width: 250px;
+      position: fixed;
+      left: calc(50% - 125px);
+      top: 57%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 60px;
+      border-radius: 10px;
+      border: 0.5rem outset red;
+      padding: 15px;
+      margin: auto;
+      animation: button 1s ease alternate infinite, battle 2s 8s ease forwards;
+      z-index: 10;
+      opacity: 0;
+    }
+
+    @keyframes battle {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    #cross {
+      background-color: gray;
+      height: 30px;
+      width: 30px;
+      top: 10px;
+      left: 50px;
+      z-index: 20;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      position: absolute;
+      opacity: 0;
+      animation: battle 2s 8s forwards;
+    }
+
+
+    #download a {
+      color: yellow;
+    }
+
+    .span {
+      height: 180px;
+    }
+
+    #objection {
+      display: flex;
+      text-align: center;
+      align-items: center;
+      margin: auto;
+      position: relative;
+      justify-content: center;
+      z-index: 5;
+    }
+
+    audio {
+      width: 100%;
+    }
+
+    body {
+      background-color: rgb(70, 40, 91);
+      animation: color 7s linear infinite
+    }
+
+    @keyframes color {
+      0% {
+        background-color: red;
+      }
+
+      12.5% {
+        background-color: orange;
+      }
+
+      25% {
+        background-color: yellow;
+      }
+
+      37.5% {
+        background-color: green;
+      }
+
+      50% {
+        background-color: cayn;
+      }
+
+      75% {
+        background-color: blue;
+      }
+
+      87.5% {
+        background-color: purple;
+      }
+
+      100% {
+        background-color: red;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
 
 
-<div class="marquee-container">
-  <div class="marquee-content">
-玩家【成步堂龍一】獲得SSR道具「咖飛」！&ensp;【天流齋真志守】的新書「小鏡的法槌咚咚大行進」已上架商城！連同限時復刻「小冥的皮鞭啪啪大冒險」！&ensp;玩家【《乂死神乂》巴洛克．班吉克斯】已達成16連殺！&ensp;第一屆知識王大賽——【梯子還是人字梯】正在舉行！&ensp;【宣傳】信樂盾之：徵助手，姓御劍者優先，年輕貌美女生亦可。有意私聊。&ensp;</div>
-  <div class="marquee-content2">
-玩家【成步堂龍一】獲得SSR道具「咖飛」！&ensp;【天流齋真志守】的新書「小鏡的法槌咚咚大行進」已上架商城！連同限時復刻「小冥的皮鞭啪啪大冒險」！&ensp;玩家【《乂死神乂》巴洛克．班吉克斯】已達成16連殺！&ensp;第一屆知識王大賽——【梯子還是人字梯】正在舉行！&ensp;【宣傳】信樂盾之：徵助手，姓御劍者優先，年輕貌美女生亦可。有意私聊。&ensp; </div>
-  <div class="marquee-content3">
-玩家【成步堂龍一】獲得SSR道具「咖飛」！&ensp;【天流齋真志守】的新書「小鏡的法槌咚咚大行進」已上架商城！連同限時復刻「小冥的皮鞭啪啪大冒險」！&ensp;玩家【《乂死神乂》巴洛克．班吉克斯】已達成16連殺！&ensp;第一屆知識王大賽——【梯子還是人字梯】正在舉行！&ensp;【宣傳】信樂盾之：徵助手，姓御劍者優先，年輕貌美女生亦可。有意私聊。&ensp;  </div>
-</div>
-
-
-<h1>泥磚菜盤</h1>
-
-<audio src="image/Phoenix Wright Ace Attorney OST Phoenix Wright Objection 2001.mp3" autoplay controls></audio>
-
-<div class="Position">
-<div id="flex-container">
-	<div class ="TGAAC BADGE">
-    	<img src="image/TGAAC.png" class= "badge" title="只有他一直在主角身邊">
+  <div class="marquee-container">
+    <div class="marquee-content">
+      玩家【成步堂龍一】獲得SSR道具「咖飛」！&ensp;【天流齋真志守】的新書「小鏡的法槌咚咚大行進」已上架商城！連同限時復刻「小冥的皮鞭啪啪大冒險」！&ensp;玩家【《乂死神乂》巴洛克．班吉克斯】已達成16連殺！&ensp;第一屆知識王大賽——【梯子還是人字梯】正在舉行！&ensp;【宣傳】信樂盾之：徵助手，姓御劍者優先，年輕貌美女生亦可。有意私聊。&ensp;
     </div>
-
-	<div class ="AA BADGE">
-	<img src="image/AA.png" class= "badge" title="456什麼時候特價">
+    <div class="marquee-content2">
+      玩家【成步堂龍一】獲得SSR道具「咖飛」！&ensp;【天流齋真志守】的新書「小鏡的法槌咚咚大行進」已上架商城！連同限時復刻「小冥的皮鞭啪啪大冒險」！&ensp;玩家【《乂死神乂》巴洛克．班吉克斯】已達成16連殺！&ensp;第一屆知識王大賽——【梯子還是人字梯】正在舉行！&ensp;【宣傳】信樂盾之：徵助手，姓御劍者優先，年輕貌美女生亦可。有意私聊。&ensp;
     </div>
-
-	<div class ="AAI BADGE">
-    	<img src="image/AAI.png" class= "badge" title="卡普空求求你在steam上架逆檢吧我什麼都會做的">
+    <div class="marquee-content3">
+      玩家【成步堂龍一】獲得SSR道具「咖飛」！&ensp;【天流齋真志守】的新書「小鏡的法槌咚咚大行進」已上架商城！連同限時復刻「小冥的皮鞭啪啪大冒險」！&ensp;玩家【《乂死神乂》巴洛克．班吉克斯】已達成16連殺！&ensp;第一屆知識王大賽——【梯子還是人字梯】正在舉行！&ensp;【宣傳】信樂盾之：徵助手，姓御劍者優先，年輕貌美女生亦可。有意私聊。&ensp;
     </div>
-</div>
-</div>
-
-<p>開局即送<strong>【5星證物】精美徽章！</strong></p>
-
-<img src="image/maya.png" class="may ads">
-<img src="image/unnecessary.png " class= "unnecessary ads">
-<img src="image/10times.png " class="10times ads">
-<img src="image/100.png" class="100 ads">
-<img src="image/leg.png" class="leg ads">
-
-<div id="objection">
-<p>快來加入這個</p><img src="image/objection.png" class="objection"><p>的世界吧！</p>
-</div>
-
-<div class="star coffee">
-<img src="image/coffee.png">
-</div>
-
-<div class="star panic">
-<img src="image/panic.png ">
-</div>
-
-<div class="star anger">
-<img src="image/anger.png ">
-</div>
-
-<div class="star mayoi">
-<img src="image/mayoi.png ">
-</div>
-
-<div class="star saw">
-<img src="image/saw.png ">
-</div>
-
-<div class="star larry">
-<img src="image/larry.png">
-</div>
+  </div>
 
 
-<div id="download">
-<a href="https://store.steampowered.com/app/787480/Phoenix_Wright_Ace_Attorney_Trilogy/" class="button">點我下載</a>
-</div>
+  <h1>泥磚菜盤</h1>
 
-<div class="span"></div>
+  <audio src="image/Phoenix Wright Ace Attorney OST Phoenix Wright Objection 2001.mp3" autoplay controls></audio>
+
+  <div class="Position">
+    <div id="flex-container">
+      <div class="TGAAC BADGE">
+        <img src="image/TGAAC.png" class="badge" title="只有他一直在主角身邊">
+      </div>
+
+      <div class="AA BADGE">
+        <img src="image/AA.png" class="badge" title="456什麼時候特價">
+      </div>
+
+      <div class="AAI BADGE">
+        <img src="image/AAI.png" class="badge" title="卡普空求求你在steam上架逆檢吧我什麼都會做的">
+      </div>
+    </div>
+  </div>
+
+  <p>開局即送<strong>【5星證物】精美徽章！</strong></p>
+
+  <img src="image/moon.png" class="moon">
+
+
+
+  <div id="ads">
+    <div class="ads">
+      <img src="image/dead.jpg">
+    </div>
+    <div id="cross">
+      <a href="https://store.steampowered.com/app/1158850/The_Great_Ace_Attorney_Chronicles/" class="cross">X</a>
+    </div>
+  </div>
+
+
+  <div id="objection">
+    <p>快來加入這個</p><img src="image/objection.png" class="objection">
+    <p>的世界吧！</p>
+  </div>
+
+  <div class="star coffee">
+    <img src="image/coffee.png">
+  </div>
+
+  <div class="star panic">
+    <img src="image/panic.png ">
+  </div>
+
+  <div class="star anger">
+    <img src="image/anger.png ">
+  </div>
+
+  <div class="star mayoi">
+    <img src="image/mayoi.png ">
+  </div>
+
+  <div class="star saw">
+    <img src="image/saw.png ">
+  </div>
+
+  <div class="star larry">
+    <img src="image/larry.png">
+  </div>
+
+
+  <div id="download">
+    <a href="https://store.steampowered.com/app/787480/Phoenix_Wright_Ace_Attorney_Trilogy/" class="button">點我下載</a>
+  </div>
+
+
+  <div id="battle">
+    <a href="https://store.steampowered.com/app/1158850/The_Great_Ace_Attorney_Chronicles/" class="battle">立即挑戰</a>
+  </div>
+
+
+  <div class="span"></div>
 
 
 </body>
+
 </html>
