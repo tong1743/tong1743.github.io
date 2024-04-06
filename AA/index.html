@@ -4,10 +4,89 @@
 <title>來玩逆轉裁判</title>
 <style>
 
-html,a,audio{cursor:url(image/cursor.png),auto;}
+html,a{cursor:url(image/cursor.png),auto;}
+
+::-webkit-scrollbar {
+    display: none;
+}
+.coffee{
+position:absolute;
+left:100%;
+top:0;
+animation:star 5s linear infinite;
+}
+
+.panic{
+position:absolute;
+left:50%;
+top:0;
+animation:star2 4s linear infinite;
+}
+
+.anger{
+position:absolute;
+left:20%;
+top:0;
+animation:star3 3s linear infinite;
+}
+
+.mayoi{
+position:absolute;
+left:20%;
+top:0;
+animation:star4 3.5s linear infinite;
+}
+
+.saw{
+position:absolute;
+left:20%;
+top:0;
+animation:star5 3.5s linear infinite;
+}
+
+.larry{
+position:absolute;
+left:20%;
+top:0;
+animation:star6 3.5s linear infinite;
+}
+
+
+@keyframes star{
+0%{left:100%;top:-100px;  transform:rotate(0deg);}
+100%{left:40%;top:100vh;transform:rotate(1080deg);}
+}
+
+@keyframes star2{
+0%{left:50%;top:-100px;  transform:rotate(0deg);}
+100%{left:75%;top:100%;transform:rotate(1080deg);}
+}
+
+@keyframes star3{
+0%{left:20%;top:-100px;  transform:rotate(0deg);}
+100%{left:95%;top:100%;transform:rotate(-720deg);}
+}
+
+@keyframes star4{
+0%{left:20%;top:-100px;  transform:rotate(0deg);}
+100%{left:0%;top:100%;transform:rotate(720deg);}
+}
+
+
+@keyframes star5{
+0%{left:20%;top:-100px;  transform:rotate(0deg);}
+100%{left:40%;top:100%;transform:rotate(-720deg);}
+}
+
+@keyframes star6{
+0%{left:80%;top:-100px;  transform:rotate(0deg);}
+100%{left:100%;top:100%;transform:rotate(-720deg);}
+}
+
 
 p{text-align: center;}
 strong{font-size:20px;color:red;}
+
 .marquee-container {
   height:50px;
   background-color:rgba(168,141,219,.6);
@@ -16,6 +95,7 @@ strong{font-size:20px;color:red;}
   display:flex;
   align-items: center;
   top:0;
+  z-index:10;
 }
 
 .marquee-content {
@@ -129,10 +209,11 @@ align-items: center;
 justify-content:center;
 font-size:60px;
 border-radius:10px;
-  border: 0.5rem outset yellow;
+border: 0.5rem outset yellow;
 padding:15px;
 margin:auto;
 animation:button 1s ease alternate infinite;
+z-index:10;
 }
 
 @keyframes button{
@@ -207,7 +288,7 @@ body{background-color:rgb(70,40,91);animation:color 7s linear infinite}
 
 <p>開局即送<strong>【5星證物】精美徽章！</strong></p>
 
-<img src="image/mayoi.png" class="mayoi ads">
+<img src="image/maya.png" class="may ads">
 <img src="image/unnecessary.png " class= "unnecessary ads">
 <img src="image/10times.png " class="10times ads">
 <img src="image/100.png" class="100 ads">
@@ -217,7 +298,29 @@ body{background-color:rgb(70,40,91);animation:color 7s linear infinite}
 <p>快來加入這個</p><img src="image/objection.png" class="objection"><p>的世界吧！</p>
 </div>
 
+<div class="star coffee">
+<img src="image/coffee.png">
+</div>
 
+<div class="star panic">
+<img src="image/panic.png ">
+</div>
+
+<div class="star anger">
+<img src="image/anger.png ">
+</div>
+
+<div class="star mayoi">
+<img src="image/mayoi.png ">
+</div>
+
+<div class="star saw">
+<img src="image/saw.png ">
+</div>
+
+<div class="star larry">
+<img src="image/larry.png">
+</div>
 
 
 <div id="download">
