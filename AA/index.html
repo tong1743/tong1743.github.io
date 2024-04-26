@@ -237,24 +237,26 @@
     }
 
     .BADGE {
-      width: 250px;
       flex: auto;
       margin: 5px;
+      width: 100px;
+    }
+
+    .BADGE:hover{
+      transform:rotate(360deg);
+      transition: transform ease-in-out 1s;
     }
 
     .TGAAC {
-      animation: huge 9s ease infinite;
-      width: 100px;
+      animation: roll 9s ease infinite;
     }
 
     .AA {
-      animation: huge 9s 3s ease infinite;
-      width: 100px;
+      animation: roll 9s 3s ease infinite;
     }
 
     .AAI {
-      animation: huge 9s 6s ease infinite;
-      width: 100px;
+      animation: roll 9s 6s ease infinite;
     }
 
 
@@ -262,21 +264,21 @@
       width: 100%;
     }
 
-    @keyframes huge {
+    @keyframes roll {
       0% {
-        width: 100px;
+        transform:rotate(0deg);
       }
 
       17% {
-        width: 200px;
+        transform:rotate(360deg);
       }
 
       33% {
-        width: 100px;
+        transform:rotate(360deg);
       }
 
       100% {
-        width: 100px;
+        transform:rotate(360deg);
       }
     }
 
@@ -289,6 +291,7 @@
       top: 100px;
       width: 100%;
       z-index: 10;
+      display: n;
     }
 
 
