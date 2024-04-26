@@ -58,14 +58,14 @@
 
     @keyframes star {
       0% {
-        left: 100%;
+        left: 90%;
         top: -100px;
         transform: rotate(0deg);
       }
 
       100% {
         left: 40%;
-        top: 100vh;
+        top: 100%;
         transform: rotate(1080deg);
       }
     }
@@ -135,7 +135,7 @@
       }
 
       100% {
-        left: 100%;
+        left: 80%;
         top: 100%;
         transform: rotate(-720deg);
       }
@@ -242,10 +242,6 @@
       width: 100px;
     }
 
-    .BADGE:hover{
-      transform:rotate(360deg);
-      transition: transform ease-in-out 1s;
-    }
 
     .TGAAC {
       animation: roll 9s ease infinite;
@@ -266,19 +262,19 @@
 
     @keyframes roll {
       0% {
-        transform:rotate(0deg);
+        width: 100px;
       }
 
       17% {
-        transform:rotate(360deg);
+        width: 200px;
       }
 
       33% {
-        transform:rotate(360deg);
+        width: 100px;
       }
 
       100% {
-        transform:rotate(360deg);
+        width: 100px;
       }
     }
 
